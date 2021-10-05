@@ -1,54 +1,42 @@
 import styled from 'styled-components';
 
-export const ModalContainer = styled.div`
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 3;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-`;
-
 export const Container = styled.div`
     background-color: #fff;
     color: #000000;
-    width: 60%;
-    height: 60%;
-    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
     z-index: 999;
-`;
 
-export const ButtonClose = styled.div`
-    background-color: transparent;
-    border: none;
-    outline: none;
-    width: 32px;
-    height: 32px;
-    right: calc(-100% + 64px);
-    top: 16px;
-    cursor: pointer;
-    display: flex;
-    position: relative;
-    align-items: center;
-    &:before,
-    &:after {
-        content: ' ';
-        position: absolute;
-        width: 2.5px;
-        height: 24px;
-        background-color: #000;
+    padding: 10px 10px 10px 30px;
+    font-family: 'Roboto', sans-serif;
+
+    button {
+        cursor: pointer;
     }
-    &:before {
-        transform: rotate(45deg);
+
+    h2 {
+        display: flex;
+        justify-content: center;
+        font-size: 25px;
+        font-weight: bold;
     }
-    &:after {
-        transform: rotate(-45deg);
+
+    img {
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 10px;
     }
-`;
-export const Content = styled.div`
-    margin: 30px;
+
+    li {
+        list-style-type: none;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+    }
 `;

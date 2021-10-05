@@ -3,6 +3,10 @@ import Modal from 'react-modal';
 
 import api from '../../services/api';
 
+import { Container } from './styles';
+
+import closeImg from '../../assets/close.svg';
+
 interface PokemonStatsProps {
     // eslint-disable-next-line camelcase
     base_stat: number;
@@ -50,19 +54,33 @@ const ModalViewPokemon: React.FC<ModalViewPokemonProps> = ({
     }, [getPokemonModal]);
 
     return (
-        <Modal isOpen={isOpen} onRequestClose={onRequestClose}>
-            <h2>{getPokemonModal.name}</h2>
-            <img
-                src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${getPokemonModal.id}.png`}
-                alt={getPokemonModal.name}
-            />
-            {pokemonModalData.map((status) => (
-                <>
-                    <li>
-                        {status.stat.name} - {status.base_stat}
-                    </li>
-                </>
-            ))}
+        <Modal
+            isOpen={isOpen}
+            onRequestClose={onRequestClose}
+            overlayClassName="react-modal-overlay"
+            className="react-modal-content"
+        >
+            <button
+                type="button"
+                onClick={onRequestClose}
+                className="react-modal-close"
+            >
+                <img src={closeImg} alt="Fechar Modal" />
+            </button>
+            <Container>
+                <h2>{getPokemonModal.name}</h2>
+                <img
+                    src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${getPokemonModal.id}.svg`}
+                    alt={getPokemonModal.name}
+                />
+                {pokemonModalData.map((status) => (
+                    <>
+                        <li>
+                            <b>{status.stat.name}</b> - {status.base_stat}
+                        </li>
+                    </>
+                ))}
+            </Container>
         </Modal>
     );
 };
