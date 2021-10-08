@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Modal from 'react-modal';
 
-import api from '../../services/api';
+import { api } from '../../services/api';
 
 import { Container } from './styles';
 

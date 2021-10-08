@@ -26,6 +26,7 @@
         "prettier"
     ],
     "rules": {
+        "react/react-in-jsx-scope": "off",
         "camelcase": "off",
         "import/no-unresolved": "off",
         "jsx-a11y/label-has-associated-control": 0,

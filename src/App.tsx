@@ -5,14 +5,19 @@ import GlobalStyle from './styles/global';
 
 import Routes from './routes';
 
+import UsePokemonsUsers from './hooks/usePokemonsUsers';
+import UseUsers from './hooks/useUsers';
+
 const App: React.FC = () => {
     return (
-        <>
-            <BrowserRouter>
-                <Routes />
-                <GlobalStyle />
-            </BrowserRouter>
-        </>
+        <UsePokemonsUsers>
+            <UseUsers>
+                <BrowserRouter>
+                    <Routes />
+                    <GlobalStyle />
+                </BrowserRouter>
+            </UseUsers>
+        </UsePokemonsUsers>
     );
 };
 

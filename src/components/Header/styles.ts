@@ -8,6 +8,10 @@ export const Container = styled.div`
 
     background: #524153;
     justify-content: space-between;
+
+    button {
+        margin: 23px 44px 23px 53px;
+    }
 `;
 
 export const Logo = styled.img`

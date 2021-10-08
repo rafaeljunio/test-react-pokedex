@@ -16,7 +16,7 @@ import {
     ContainerCarousel,
 } from './styles';
 
-import api from '../../services/api';
+import { api } from '../../services/api';
 
 interface Pokemon {
     pokemon: Types;
@@ -120,8 +120,14 @@ const Home: React.FC = () => {
                     label: obj.name,
                 })),
             );
+            console.log(types);
         });
 
+        /*
+        fetch('/api/pokemonsUser')
+            .then((res) => res.json())
+            .then((json) => console.log(json));
+*/
         const data = pagination(pokemons, pageState, rowsState);
         setPokemonsDataFilter(data);
     }, [pageState, pokemons, rowsState]);
