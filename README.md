@@ -10,8 +10,6 @@ Este projeto foi feito utilizando as seguintes tecnologias:
 
 # :construction_worker: Executando
 
-# Server
-
 ```bash
 # Clone o Repositório
 $ git@github.com:rafaeljunio/Pokemon.git
